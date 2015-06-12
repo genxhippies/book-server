@@ -65,5 +65,10 @@ server {
 }
 ```
 
-Reference
+# Note
+
+* How to generate ERD
+./manage.py graph_models books alfred achievements | dot -Tpdf -o model.pdf
+
+# Reference
 https://github.com/PhilipGarnero/django-rest-framework-social-oauth2
