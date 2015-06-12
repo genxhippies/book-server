@@ -9,6 +9,9 @@ class MyBook(models.Model):
 
     rating = models.SmallIntegerField(default=0)
 
+    class Meta:
+        unique_together = ( 'user', 'book' )
+
 class Checkpoint(models.Model):
     PURCHASE = 'P'
     BORROW = 'B'
@@ -46,3 +49,5 @@ class WishList(models.Model):
     user = models.ForeignKey(User)
     book = models.ForeignKey(Book)
 
+    class Meta:
+        unique_together = ( 'user', 'book' )
