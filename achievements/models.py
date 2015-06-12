@@ -10,3 +10,5 @@ class MyAchievement(models.Model):
     user = models.ForeignKey(User)
     achievement = models.ForeignKey(Achievement)
     
+    class Meta:
+        unique_together = ( 'user', 'achievement' )
