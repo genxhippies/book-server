@@ -7,5 +7,6 @@ class Book(models.Model):
     author = models.CharField(max_length=200, blank=True)
     publisher = models.CharField(max_length=200, blank=True)
     description = models.CharField(max_length=1000, blank=True)
+    image = models.CharField(max_length=1000, blank=True)
     pubdate = models.DateField(null=True, blank=True)
 
